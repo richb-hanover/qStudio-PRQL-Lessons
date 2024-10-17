@@ -203,6 +203,17 @@ There is a keyboard shortcut -
 **Cmd-/** (Mac) or **Ctl-/** (Windows) - 
 that comments out/uncomments the lines that are selected.
 
+**Export to Excel**
+
+One cool feature of qStudio is that you can export
+the results directly to Excel.
+The Result pane opens directly in a new workbook.
+To do this, click the small Excel icon in the
+top-right of the window.
+It's the second icon on the right side of the image below.
+
+![icons at top of result](./media/icons-in-result-window.png)
+
 **Further observations**
 
 1. (A bit of "PRQL lingo".)
