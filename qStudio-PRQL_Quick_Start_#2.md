@@ -1,4 +1,4 @@
-# qStudio/PRQL Lesson #2 - Playing with qStudio
+# qStudio/PRQL Quick Start #2 - Playing with qStudio
 
 Lesson #2 tells how to install qStudio,
 download and open the _Property\_in\_Lyme_ SQLite database,

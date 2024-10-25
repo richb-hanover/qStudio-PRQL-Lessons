@@ -1,4 +1,4 @@
-# qStudio/PRQL Lesson #1 - Demonstration
+# qStudio/PRQL Quick Start #1 - Demonstration
 
 Over the years, we have collected a ton of data -
 mostly from spreadsheets or PDF files,

@@ -1,4 +1,4 @@
-# qStudio/PRQL Lesson #4 - More Transforms
+# qStudio/PRQL Quick Start #4 - More Transforms
 
 PRQL has more _transforms_ (statements) that modify a table
 as it passes through its pipeline.

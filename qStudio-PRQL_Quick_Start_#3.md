@@ -1,4 +1,4 @@
-# qStudio/PRQL Lesson #3 - Practical Matters
+# qStudio/PRQL Quick Start #3 - Practical Matters
 
 You may encounter little problems with qStudio and PRQL.
 Here's how to work around them.
