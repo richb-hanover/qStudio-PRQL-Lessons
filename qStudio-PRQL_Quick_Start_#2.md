@@ -8,7 +8,7 @@ and then start making your own queries.
 
   **On a Mac:** 
     * Download the Mac version of qStudio from:  
-      [https://test.richb-hanover.com/downloads/qStudio.zip](https://test.richb-hanover.com/downloads/qStudio.zip)
+      [http://test.richb-hanover.com/downloads/qStudio.zip](http://test.richb-hanover.com/downloads/qStudio.zip)
     * Unzip the result to get the **qStudio.app** application
     * Double-click the application.
       You will see a "unverified developer" (or similar) warning.
