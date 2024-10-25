@@ -216,14 +216,13 @@ It's the second icon on the right side of the image below.
 
 **Further observations**
 
-1. (A bit of "PRQL lingo".)
-  PRQL statements "transform" the table they receive
+1. PRQL statements "transform" the table they receive
   by modifing it in some way and passing it along to
-  the next statement (also called a "transform").
-  This is the power feature of PRQL: transforms can be 
+  the next statement.
+  This is the power feature of PRQL: the statements can be 
   "stacked" to form a pipeline that continally modify the
   data as it passes through to produce a final result.
-
+  
 2. The `filter` statement (the "filter transform")
   could have been placed much earlier in the query.
   In fact, it could have immediately followed the
@@ -237,6 +236,20 @@ It's the second icon on the right side of the image below.
   From that point in the pipeline,
   all the rows would have remained in the same order.
   
-4. There are a few other PRQL transforms
+4. _Finally, a bit of "PRQL lingo"_
+  * Since PRQL statement _transform_ a table, they're 
+    also called "transforms".
+  * Tables are also called "relations".
+  * A "tuple" is the PRQL name names that are
+  enclosed in `{ ... }`.
+  For example, it's proper to say the `select` transform
+  requires a "tuple" (instead of a "list").
+
+### Looking ahead
+
+Lesson #3 talks about some tricky bits you may encounter when
+  using qStudio and PRQL. 
+
+There are a few other PRQL transforms
 (`join`, `aggregate`, `take`, `group`) that will be covered
-in Lesson #3.
+in Lesson #4.
