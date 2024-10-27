@@ -37,11 +37,17 @@ and then start making your own queries.
 3. **Download the "Property in Lyme" SQLite database**
   The latest copy of the database is always available from:
   [https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/Property\_In\_Lyme.sqlite](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/Property_In_Lyme.sqlite)
-
+  
 4. **Open the "Property in Lyme" SQLite database in qStudio.**
    To do this, drag the database's icon into the qStudio window
    (top left corner, but the bottom half of that pane).
 
+5. (You might also download the
+  [Chinook database](https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_Sqlite.sqlite)
+  that is frequently used for examples.
+  You can also drag the Chinook database to qStudio -
+  it will work properly when both are opened.)
+  
 ## Playing with qStudio
 
 **qStudio is now running.**
