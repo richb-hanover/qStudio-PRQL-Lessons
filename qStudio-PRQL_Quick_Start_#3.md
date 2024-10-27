@@ -21,7 +21,7 @@ in the bottom half of the window.
 
 This is most likely caused by trying to execute
 an empty query or a commented-out line.
-Click somewhere in the query window (to un-select) and re-execute. 
+Click somewhere in the query window (to un-select) and re-execute.
 
 ![red-bar error](./media/red-bar-error.png)
 
@@ -39,15 +39,15 @@ To correct the error, simply fix the typo and re-execute.
 
 ### Unknown name (reason #2)
 
-Correcting line 7 above (adding back the "t") but 
+Correcting line 7 above (adding back the "t") but
 changing the query in line 5 (within the `select`)
 to `EF_MuniEasemen` also gives an "Unknown name" error.
-(Try it.) 
+(Try it.)
 
 But qStudio still reports it on line 7.
 The reason is a bit subtle:
 the `select` transform passes along the named columns,
-including one named `EF_MuniEasemen` (without the "t"). 
+including one named `EF_MuniEasemen` (without the "t").
 Yet the `filter` transform is looking a the column name
 that has a "t", and so it gives the "Unknown name" error.
 To correct the error, simply fix the typo and re-execute.
@@ -96,7 +96,7 @@ To work around it, click a _different_ table name,
 then the one you want.
 The Result pane changes to the desired table.
 
-### Result window only shows top 1,000 rows of a table.
+### Result window only shows top 1,000 rows of a table
 
 When you click a table name,
 the Result window shows the first 1000 rows.
@@ -105,11 +105,9 @@ or the next 1000 rows.
 To work around this, execute the query `from <table-name>`:
 then all rows appear.
 
-### Result window doesn't pop out.
+### Result window doesn't pop out
 
 Sometimes, clicking the "pop-out" icon of the Result window
 (black rectangle with arrow - see the screen shots above)
 causes it to become a separate window.
 Sometimes it doesn't. I don't know why.
-
-

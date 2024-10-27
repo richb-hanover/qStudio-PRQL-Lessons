@@ -4,7 +4,7 @@ Over the years, we have collected a ton of data -
 mostly from spreadsheets or PDF files,
 or retrieved from the Town, Vision or
 the Grafton County Register of Deeds.
-For example all the following files are in my 
+For example all the following files are in my
 [Github repository](https://github.com/TaxFairness/TaxFairness).
 
 * [Lyme's Old-to-New values from the MS-1 reports](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/RawData/OldToNewValues.xlsx)
@@ -15,11 +15,12 @@ All these files have a similar format:
 a bunch of rows (usually representing parcels)
 with interesting data in the columns.
 
-For example, I scanned all the Old-to-New documents for 2021 to 2024; they're in the "OldToNewValues" spreadsheet.
+For example, I scanned all the Old-to-New documents for 2021 to 2024;
+they're in the "OldToNewValues" spreadsheet.
 If you look at that spreadsheet,
 you'll see these columns:
 
-```
+```bash
 PID
 Map/Block/Unit
 Location (street address)
@@ -31,12 +32,13 @@ Ratio
 Difference
 Year
 ```
+
 Or look at the "Scraped Data" file.
 From time to time, I run a script that loads every page from Vision
 and plucks up the values for each property.
 It produces these columns:
 
-```
+```bash
 PID
 Owner
 Street Address
@@ -51,7 +53,7 @@ Lot size,
 The Grafton County Register of Deeds file
 includes columns for:
 
-```
+```bash
 ID
 Date&Time
 Date
@@ -64,12 +66,13 @@ Party1 (seller)
 Party2 (Buyer)
 ...
 ```
+
 ## The good side of spreadsheets
 
 Spreadsheets are a very convenient way to view data.
 Everyone knows how to open and manipulate them.
 And lots of interesting data
-is reported in a spreadsheet. 
+is reported in a spreadsheet.
 
 You could consider putting each of the above into a
 separate tab of a spreadsheet.
@@ -101,7 +104,8 @@ For example:
   that column just gets in the way.
   You could delete it - but maybe you'll want it later on.
 
-What if there were a way that you can select only the columns you want, and create new columns with their own calculations, and sort every which way?
+What if there were a way that you can select only the columns you want,
+and create new columns with their own calculations, and sort every which way?
 
 ## Using a database
 
@@ -112,7 +116,7 @@ spreadsheet's columns and rows.
 When you use a database, you create queries that produce new results
 without changing the underlying data.
 
-The fundamental rule of databases (their "super power") 
+The fundamental rule of databases (their "super power")
 is that every operation starts with a table and
 creates a new (modified) table.
 Subsequent operations make further modifications to
@@ -129,7 +133,7 @@ or modified to answer different questions.
 ## qStudio demonstration
 
 qStudio is an application that lets
-you view and manipulate the tables of a SQL database. 
+you view and manipulate the tables of a SQL database.
 It's the first tool that I think is good enough to criticize -
 that is, all the prior ones were just too hard to use,
 with too many steps to get useful results.
@@ -143,6 +147,7 @@ I like qStudio because it:
   to write queries (SQL is the pits,
   you won't need to know it)
 
-So here's qStudio. _Demo follows, and ends Lesson #1_
+So here's qStudio. *Demo follows, and ends Lesson #1*
 
-_Lesson #2 tells how to install qStudio on your computer, and execute the same queries as the demo._
+*Lesson #2 tells how to install qStudio on your computer,
+and execute the same queries as the demo.*

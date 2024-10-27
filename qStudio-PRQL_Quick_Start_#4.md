@@ -6,14 +6,14 @@ _Much of the discussion below comes from the
 [PRQL Reference Tutorial](https://prql-lang.org/book/tutorial/relations.html)_
 
 We have already introduced several PRQL transforms.
-Let's review how each changes the "shape"
+Let's review what each does and how each changes the "shape"
 of the table:
 
-* **`from`** - begins a pipeline and passes the entire table to 
-  the next transform. 
+* **`from`** - begins a pipeline and passes the entire table to
+  the next transform.
 * **`select`** - Changes the number of columns by retaining only
   those named within the tuple (the list of column names
-  inside the `{ ... }`) but never the number of rows. 
+  inside the `{ ... }`) but never the number of rows.
 * **`filter`** - Changes the number of rows by excluding the ones
   that don't match the criteria.
   Never changes the number of columns.
@@ -37,31 +37,30 @@ The set of rows picked can be specified in two ways:
 
 For example:
 
-```
+```elm
 from invoices
 take 4         # takes the first four lines
 
 # - or -
- 
+
 from invoices
 take 4..7      # takes rows 4, 5, 6, and 7
-
 ```
 
 ## `aggregate`
 
 The `aggregate` transform takes a tuple (list of column names)
-that “distill down” data from all the rows into a single row.
+and “distills down” data from all the rows into a single row.
 This is frequently used for statistical analysis.
 
-```
+```elm
 from invoices
 aggregate { sum_of_orders = sum total }
 ```
-If the "invoices" table has a column named `total`
-(perhaps it's the total of a single order in that row),
-the query above woud compute the sum of the total column
-of all rows of the invoices table to produce
+
+In the query above, the "invoices" table has a column named `total`
+(perhaps it's the total of a single order in that row).
+It sums all the `total` column values to produce
 a single row.
 
 The number of columns is equal to the number of items within the tuple.
@@ -69,22 +68,37 @@ In the example above, the result would be _one_ column.
 In the example below, the resulting table has _two_ columns -
 `sum_of_orders` and `avg_of_orders`
 
-```
+```elm
 from invoices
-aggregate { 
-	sum_of_orders = sum total,
-	avg_of_orders = average total,
+aggregate {
+    sum_of_orders = sum total,
+    avg_of_orders = average total,
 }
 ```
 
 ## `group`
 
-I didn't finish this...
+The `group` transform performs a set of operations on "groups" of rows
+based on some characteristic.
+You might use `group` to analyze data by city or some other value.
 
-[See the "grouping" section of the PRQL docs](https://prql-lang.org/book/tutorial/aggregation.html#grouping)
+The `group` transform retains all the columns:
+the number of rows is equal to the number of different combinations
+within the group characteristic (say, the number of different cities).
 
-##`join`
+[See the "grouping" section of the PRQL docs for more information.](https://prql-lang.org/book/tutorial/aggregation.html#grouping)
 
-I didn't finish this...
+## `join`
 
-[See the "join" section of the PRQL docs](https://prql-lang.org/book/tutorial/relations.html#join-transform)
+The `join` transform combines the columns of two tables together
+"side-by-side" based on related columns of each table.
+This is convenient to "join" two different tables have columns with
+interesting data using common parameters,
+and then use `select` to extract the interesting columns.
+
+The `join` transform adds columns to the result:
+(it contains _all_ the columns from both tables).
+The number of rows varies based on the data within the tables
+and the operators used to join the tables.
+
+[See the "join" section of the PRQL docs for more informatioin.](https://prql-lang.org/book/tutorial/relations.html#join-transform)
