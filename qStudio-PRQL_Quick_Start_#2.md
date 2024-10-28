@@ -85,7 +85,7 @@ The basic process is:
 * Execute the query (**Cmd-E** / **Ctl-E**)
 * _You may be prompted with a request to install the
   "SQLite driver". Allow it to happen._
-* The result from the qury appears in the bottom "Result" pane.
+* The result from the query appears in the bottom "Result" pane.
   If the Result pane is not visible,
   choose **Windows -> Result**
 * Edit the query by typing in the window.
@@ -227,10 +227,10 @@ It's the second icon on the right side of the image below.
   by modifing it in some way and passing it along to
   the next statement.
   This is the power feature of PRQL: the statements can be
-  "stacked" to form a pipeline that continally modify the
+  "stacked" to form a pipeline that continally modifies the
   data as it passes through to produce a final result.
 
-2. The `filter` statement (the "filter transform")
+2. The `filter` statement 
   could have been placed much earlier in the query.
   In fact, it could have immediately followed the
   initial `from ...`
@@ -238,7 +238,7 @@ It's the second icon on the right side of the image below.
   to passing them to the first `select` - and in the end,
   the result would have been identical.
 
-3. Similarly, the `sort ...` transform could have been placed
+3. Similarly, the `sort ...` statement could have been placed
   anywhere in this pipeline.
   From that point in the pipeline,
   all the rows would have remained in the same order.

@@ -32,14 +32,14 @@ based on their position within the table.
 The number of columns is unchanged.
 The set of rows picked can be specified in two ways:
 
-* a plain number `x`, which will pick the first x rows, or
+* a plain number `x`, which will pick the first `x` rows, or
 * an inclusive range of rows `start..end`
 
 For example:
 
 ```elm
 from invoices
-take 4         # takes the first four lines
+take 4         # takes the first four rows
 
 # - or -
 
@@ -49,7 +49,7 @@ take 4..7      # takes rows 4, 5, 6, and 7
 
 ## `aggregate`
 
-The `aggregate` transform takes a tuple (list of column names)
+The `aggregate` transform takes a tuple (a list of column names)
 and “distills down” data from all the rows into a single row.
 This is frequently used for statistical analysis.
 
@@ -59,8 +59,8 @@ aggregate { sum_of_orders = sum total }
 ```
 
 In the query above, the "invoices" table has a column named `total`
-(perhaps it's the total of a single order in that row).
-It sums all the `total` column values to produce
+(perhaps it's the total of a single order).
+It sums all the values in the `total` column to produce
 a single row.
 
 The number of columns is equal to the number of items within the tuple.
@@ -92,11 +92,11 @@ within the group characteristic (say, the number of different cities).
 
 The `join` transform combines the columns of two tables together
 "side-by-side" based on related columns of each table.
-This is convenient to "join" two different tables have columns with
-interesting data using common parameters,
+It is often useful to "join" two separate tables that each have
+columns with interesting data using common parameters,
 and then use `select` to extract the interesting columns.
 
-The `join` transform adds columns to the result:
+The `join` transform adds columns to the result
 (it contains _all_ the columns from both tables).
 The number of rows varies based on the data within the tables
 and the operators used to join the tables.

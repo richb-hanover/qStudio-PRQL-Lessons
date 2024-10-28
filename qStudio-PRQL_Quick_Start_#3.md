@@ -48,7 +48,7 @@ But qStudio still reports it on line 7.
 The reason is a bit subtle:
 the `select` transform passes along the named columns,
 including one named `EF_MuniEasemen` (without the "t").
-Yet the `filter` transform is looking a the column name
+Yet the `filter` transform is looking for a column name
 that has a "t", and so it gives the "Unknown name" error.
 To correct the error, simply fix the typo and re-execute.
 
@@ -58,7 +58,7 @@ _Note:_ neither qStudio nor PRQL have any idea of the actual
 column names in the database.
 You must type them correctly in the query.
 If a column name is consistently misspelled
-(for example, both lines have `EF_MuniEasemen`),
+(for example, if both lines have `EF_MuniEasemen`),
 qStudio will dutifully create and execute the query.
 
 When the response returns, the database simply substitutes
@@ -102,7 +102,7 @@ When you click a table name,
 the Result window shows the first 1000 rows.
 There doesn't seem to be a way to see more rows,
 or the next 1000 rows.
-To work around this, execute the query `from <table-name>`:
+To work around this, execute the query `from <table-name>`
 then all rows appear.
 
 ### Result window doesn't pop out
