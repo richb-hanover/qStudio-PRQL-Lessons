@@ -1,7 +1,7 @@
-# qStudio/PRQL Quick Start #4 - More Transforms
+# QStudio/PRQL Quick Start #4 - More Transforms
 
-PRQL has more _transforms_ (statements) that modify a table
-as it passes through its pipeline.
+PRQL ("prequel") has more _transforms_ (statements) that
+modify a table as it passes through its pipeline.
 _Much of the discussion below comes from the
 [PRQL Reference Tutorial](https://prql-lang.org/book/tutorial/relations.html)_
 
@@ -101,4 +101,4 @@ The `join` transform adds columns to the result
 The number of rows varies based on the data within the tables
 and the operators used to join the tables.
 
-[See the "join" section of the PRQL docs for more informatioin.](https://prql-lang.org/book/tutorial/relations.html#join-transform)
+[See the "join" section of the PRQL docs for more information.](https://prql-lang.org/book/tutorial/relations.html#join-transform)

@@ -1,11 +1,11 @@
-# qStudio/PRQL Quick Start #3 - Practical Matters
+# QStudio/PRQL Quick Start #3 - Practical Matters
 
-You may encounter little problems with qStudio and PRQL.
+You may encounter little problems with QStudio and PRQL.
 Here's how to work around them.
 
 ## PRQL queries
 
-PRQL is a terrific language for writing queries.
+PRQL ("prequel") is a terrific language for writing queries.
 When the query is correct, it works great.
 
 But its diagnostic messages are often arcane.
@@ -44,7 +44,7 @@ changing the query in line 5 (within the `select`)
 to `EF_MuniEasemen` also gives an "Unknown name" error.
 (Try it.)
 
-But qStudio still reports it on line 7.
+But QStudio still reports it on line 7.
 The reason is a bit subtle:
 the `select` transform passes along the named columns,
 including one named `EF_MuniEasemen` (without the "t").
@@ -54,12 +54,12 @@ To correct the error, simply fix the typo and re-execute.
 
 ### Column heading in "..."
 
-_Note:_ neither qStudio nor PRQL have any idea of the actual
+_Note:_ neither QStudio nor PRQL have any idea of the actual
 column names in the database.
 You must type them correctly in the query.
 If a column name is consistently misspelled
 (for example, if both lines have `EF_MuniEasemen`),
-qStudio will dutifully create and execute the query.
+QStudio will dutifully create and execute the query.
 
 When the response returns, the database simply substitutes
 the misspelling for the column name and the contents of the column.
@@ -77,7 +77,7 @@ To correct the error, simply fix the typo(s) and re-execute.
 
 The Result window displays table contents
 and the results of a query.
-Sometimes qStudio doesn't act quite as expected.
+Sometimes QStudio doesn't act quite as expected.
 
 ### Some columns are too wide in Result window
 

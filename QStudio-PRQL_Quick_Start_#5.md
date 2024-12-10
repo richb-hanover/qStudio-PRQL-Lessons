@@ -1,6 +1,6 @@
-# qStudio/PRQL Quick Start #5 - Practical Example
+# QStudio/PRQL Quick Start #5 - Practical Example
 
-Let's try a practical example of using PRQL with qStudio.
+Let's try a practical example of using PRQL with QStudio.
 
 The `LymeOldToNew` table of the _Property\_in\_Lyme.sqlite_ database
 has all the parcels in Lyme, showing
@@ -11,12 +11,12 @@ and another in October that corrected many values.)
 **Question** How can we understand what properties changed value between
 the August and October 2024 readings?
 
-The following steps show the iterative process for 
+The following steps show the iterative process for
 reviewing and massaging
 data sets to produce the desired information.
 As you work through the steps, you may find oddities in the
 underlying data that need to be tidied up.
-The beauty of the PRQL lanuage (as opposed to using SQL)
+The beauty of the PRQL language (as opposed to using SQL)
 is that you can focus on the broad picture
 and let PRQL take care of the details.
 
@@ -26,9 +26,9 @@ Let's first review the data that we have available.
 (Be sure to retrieve a fresh copy of the _Property\_In\_Lyme.sqlite_
 database from the
 [repository](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/Property_In_Lyme.sqlite)
-and add it to qStudio.)
+and add it to QStudio.)
 
-* Click the `LymeOldToNew` table in the upper-left corner of qStudio
+* Click the `LymeOldToNew` table in the upper-left corner of QStudio
 * Notice that it has columns for address, owner, old and new values,
   and a year and CollectedOn column.
   (There are other columns that can mostly be ignored.)
@@ -36,7 +36,7 @@ and add it to qStudio.)
   data from different years by creating a table that contains
   only rows where the year is 2022,
   or where the CollectedOn column has a certain date.
-  
+
 ## Create a table for the August 2024 rows
 
 PRQL has the ability to create a new table from an existing one.
@@ -46,9 +46,9 @@ It assigns a name to a set of transforms that result in a table.
 To start, create a new PRQL query.
 Always begin like this:
 
-1. Create a new query file. Within qStudio, choose **File -> New**,
+1. Create a new query file. Within QStudio, choose **File -> New**,
   save it as `AugToOct.prql` on the Desktop.
-  (The `.prql` suffix is required so that qStudio treats the
+  (The `.prql` suffix is required so that QStudio treats the
   lines as a PRQL query.)
 2. Add the following lines
 3. Execute the query (with Cmd-E or Ctl-E)
@@ -102,7 +102,6 @@ no longer have the "LO_" prefix
 because we assigned new names to them:
 `PID`, `Location`, `AugOld`, and `AugNew`.
 
-
 ## Create an October table
 
 Using a similar process, we can create a table that holds
@@ -152,12 +151,12 @@ The process the computer follows is tedious, but straightforward:
 Start with the first row of `aug24` - find its PID (it happens to be 1).
 Find a corresponding row (with a LO_PID of 1) in `oct24`
 and place both rows side-by-side in the result.
-Then examine each subsequent row of `aug24` and combine with a 
+Then examine each subsequent row of `aug24` and combine with a
 corresponding row of `oct24` where their PID values match.
 The resulting table has seven columns: the four from `aug24`
 and three from `oct24`
 
-_Try this now:_ Type the two lines above into qStudio,
+_Try this now:_ Type the two lines above into QStudio,
 below the two table definitions and execute the query.
 (Comment out any earlier `from...` lines.)
 
@@ -244,7 +243,7 @@ It was critical to performing the `join` operation,
 but is no longer needed.
 It's also confusing to others reading the results
 ("What's this `LO_PID` thing? Do I need to know about it?")
-Better to take it out. 
+Better to take it out.
 
 There's a way to use the `select` transform to _exclude_
 the named columns instead of retaining them.
@@ -255,11 +254,11 @@ to exclude.
 select !{ LO_PID }
 ```
 
-This removes the `LO_PID` column, while retaining all the other columns. 
+This removes the `LO_PID` column, while retaining all the other columns.
 
 ## Summary
 
-This exercise shows how qStudio and PRQL allow you to investigate
+This exercise shows how QStudio and PRQL allow you to investigate
 a data set interactively.
 You can view the full data set, then `filter` the rows,
 `select` the columns, and

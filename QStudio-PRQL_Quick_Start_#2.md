@@ -1,56 +1,57 @@
-# qStudio/PRQL Quick Start #2 - Playing with qStudio
+# QStudio/PRQL Quick Start #2 - Playing with QStudio
 
-Lesson #2 tells how to install qStudio,
+Lesson #2 tells how to install QStudio,
 download and open the _Property\_in\_Lyme_ SQLite database,
 and then start making your own queries.
 
-1. **Install qStudio**
+1. **Install QStudio**
 
    **On a Mac:**
 
-   * Download the Mac version of qStudio from:
-    [https://randomneuronsfiring.com/wp-content/uploads/qStudio.zip](https://randomneuronsfiring.com/wp-content/uploads/qStudio.zip)
-   * Unzip the result to get the **qStudio.app** application
+   * Download the Mac version of QStudio from:
+    [https://randomneuronsfiring.com/wp-content/uploads/QStudio.zip](https://randomneuronsfiring.com/wp-content/uploads/QStudio.zip)
+   * Unzip the result to get the **QStudio.app** application
    * Double-click the application.
-    You will see a "unverified developer" (or similar) warning.
+    You will see a "Can't open - move to Trash" or
+    "unverified developer" (or similar) warning.
     Use **System Preferences -> Privacy and Security** to
     indicate that you trust the application.
-    Click "Open anyway" if necessary. qStudio opens.
+    Click "Open anyway" if necessary. QStudio opens.
 
    **On a Windows machine:**
 
    * Download the **Installer for Windows** from the
-    qStudio Downloads page:
-    [https://www.timestored.com/qstudio/download](https://www.timestored.com/qstudio/download)
+    QStudio Downloads page:
+    [https://www.timestored.com/QStudio/download](https://www.timestored.com/QStudio/download)
    * Run the installer in the usual way
    * Using the command line, enter `winget install prqlc`
     to install the PRQL compiler.
-   * Open qStudio
+   * Open QStudio
 
-2. **Register for a free qStudio license**
-  When qStudio starts up, it requires you to register for
+2. **Register for a free QStudio license**
+  When QStudio starts up, it requires you to register for
   a free account.
   Provide your email address and you will be taken to a page
   that displays a license code (a long string).
-  Copy that string and paste it into the qStudio window.
+  Copy that string and paste it into the QStudio window.
 
 3. **Download the "Property in Lyme" SQLite database**
   The latest copy of the database is always available from:
   [https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/Property\_In\_Lyme.sqlite](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/Property_In_Lyme.sqlite)
   
-4. **Open the "Property in Lyme" SQLite database in qStudio.**
-   To do this, drag the database's icon into the qStudio window
+4. **Open the "Property in Lyme" SQLite database in QStudio.**
+   To do this, drag the database's icon into the QStudio window
    (top left corner, but the bottom half of that pane).
 
 5. (You might also download the
   [Chinook database](https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_Sqlite.sqlite)
   that is frequently used for examples.
-  You can also drag the Chinook database to qStudio -
+  You can also drag the Chinook database to QStudio -
   it will work properly when both are opened.)
   
-## Playing with qStudio
+## Playing with QStudio
 
-**qStudio is now running.**
+**QStudio is now running.**
 Here are some hints for trying its features.
 
 ### View the tables
@@ -73,8 +74,8 @@ Interesting tables are:
 
 The basic process is:
 
-* Create a new file in qStudio (**File -> New File**)
-* Save as `qStudioTest.prql` (".prql" suffix is important)
+* Create a new file in QStudio (**File -> New File**)
+* Save as `QStudioTest.prql` (".prql" suffix is important)
   using **File -> Save As...**
   _I recommend you save it to a new folder on the Desktop
   so it's easy to find later._
@@ -94,7 +95,7 @@ The basic process is:
 ### Enhancing your query
 
 Here are examples taken from the first lesson.
-You can experiment with qStudio by modifying the
+You can experiment with QStudio by modifying the
 queries as shown below:
 
 > Note - these examples use the [PRQL](https://prql-lang.org)
@@ -148,7 +149,7 @@ select {
 }
 ```
 
-_The qStudio result now shows five columns,
+_The QStudio result now shows five columns,
 the first two plus the three new ones.
 The Result pane shows them in the order they are listed
 in the query._
@@ -212,7 +213,7 @@ that comments out/uncomments the lines that are selected.
 
 #### Export to Excel
 
-One cool feature of qStudio is that you can export
+One cool feature of QStudio is that you can export
 the results directly to Excel.
 The Result pane opens directly in a new workbook.
 To do this, click the small Excel icon in the
@@ -227,10 +228,10 @@ It's the second icon on the right side of the image below.
   by modifing it in some way and passing it along to
   the next statement.
   This is the power feature of PRQL: the statements can be
-  "stacked" to form a pipeline that continally modifies the
+  "stacked" to form a pipeline that continually modifies the
   data as it passes through to produce a final result.
 
-2. The `filter` statement 
+2. The `filter` statement
   could have been placed much earlier in the query.
   In fact, it could have immediately followed the
   initial `from ...`
@@ -256,7 +257,7 @@ It's the second icon on the right side of the image below.
 ### Looking ahead
 
 Lesson #3 talks about some tricky bits you may encounter when
-using qStudio and PRQL.
+using QStudio and PRQL.
 
 There are a few other PRQL transforms
 (`join`, `aggregate`, `take`, `group`) that will be covered

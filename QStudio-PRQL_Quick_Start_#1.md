@@ -1,4 +1,4 @@
-# qStudio/PRQL Quick Start #1 - Demonstration
+# QStudio/PRQL Quick Start #1 - Demonstration
 
 Over the years, we have collected a ton of data -
 mostly from spreadsheets or PDF files,
@@ -7,7 +7,7 @@ the Grafton County Register of Deeds.
 For example all the following files are in my
 [Github repository](https://github.com/TaxFairness/TaxFairness).
 
-* [Lyme's Old-to-New values from the MS-1 reports](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/RawData/OldToNewValues.xlsx)
+* [Lyme's Old-to-New values from the MS-1 reports](https://github.com/TaxFairness/TaxFairness/blob/main/RawData/Old-New%20Values/OldToNewValues.xlsx)
 * [Data "scraped" from Vision site](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/RawData/ScrapedData/ScrapedData16-12Oct2024/ScrapeDataXX.tsv)
 * [Grafton County Register of Deeds](https://raw.githubusercontent.com/TaxFairness/TaxFairness/refs/heads/main/RawData/GCRoD-All-Data.xlsx)
 
@@ -130,24 +130,24 @@ instructions that tell how to manipulate the tables.
 That query can be saved and re-executed at any time,
 or modified to answer different questions.
 
-## qStudio demonstration
+## QStudio demonstration
 
-qStudio is an application that lets
+QStudio is an application that lets
 you view and manipulate the tables of a SQL database.
 It's the first tool that I think is good enough to criticize -
 that is, all the prior ones were just too hard to use,
 with too many steps to get useful results.
-I like qStudio because it:
+I like QStudio because it:
 
 * Runs on Windows, Mac, Linux.
 * Provides a good enough user interface.
-  (Although qStudio's interface has some some sharp edges,
+  (Although the QStudio interface has some sharp edges,
   they're easy to recognize and work around.)
-* Uses PRQL (pronounced "Prequel") to make it MUCH simpler
+* Uses PRQL (pronounced "prequel") to make it MUCH simpler
   to write queries (SQL is the pits,
   you won't need to know it)
 
-So here's qStudio. *Demo follows, and ends Lesson #1*
+So here's QStudio. *Demo follows, and ends Lesson #1*
 
-*Lesson #2 tells how to install qStudio on your computer,
+*Lesson #2 tells how to install QStudio on your computer,
 and execute the same queries as the demo.*
